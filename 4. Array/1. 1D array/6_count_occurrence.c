@@ -1,15 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int arr[] = {1, 2, 3, 2 ,2};
-    int count =0;
-    int ele =2;
-    for (int i = 0; i < 5; i++)
+    int arr1[] = {1, 2, 3, 4 ,5};
+    int arr2[] ={6, 7, 8, 9, 10};
+    int n1 = sizeof(arr1)/sizeof(arr1[0]);
+    int n2 = (sizeof(arr2)/sizeof(arr2[0]));
+    int arr[n1+n2];
+    for (int i = 0; i < n1; i++)
     {
-        if(arr[i] ==ele){
-            count++;
-        }
-    }  
-    printf("The element %d occurs %d time(s) in the array.\n", ele, count);
+        arr[i] = arr1[i];
+    } 
+    for (int i = 0; i < n2; i++)
+    {
+        arr[n1+i] = arr2[i];
+    } 
+    for (int i = 0; i < n1+n2; i++)
+    {
+        printf("%d ",arr[i]); 
+    } 
     return 0;
 }
