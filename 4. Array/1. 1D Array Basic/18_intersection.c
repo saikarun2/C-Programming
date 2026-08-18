@@ -27,19 +27,24 @@ int main()
     printf("Intersection: ");
     while (i < n && j < m)
     {
-        if (a[i] == b[j])
+        if (a[i] < b[j])
         {
-            printf("%d ", a[i]);
             i++;
-            j++;
         }
-        else if (a[i] < b[j])
+        else if (a[i] > b[j])
         {
-            i++;
+            j++;
         }
         else
         {
-            j++;
+            printf("%d ", a[i]);
+            int value = a[i];
+            while (i < n && a[i] == value){
+                i++;
+            }
+            while (j < m && b[j] == value){
+                j++;
+            }
         }
     }
     return 0;
