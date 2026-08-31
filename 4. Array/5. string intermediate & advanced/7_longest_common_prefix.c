@@ -13,8 +13,7 @@ int main()
     int prefix_len = strlen(str[0]);
     for (int i = 1; i < n; i++) {
         int j = 0;
-        while (j < prefix_len &&
-               str[0][j] == str[i][j]) {
+        while (j < prefix_len && str[0][j] == str[i][j]) {
             j++;
         }
         prefix_len = j;
