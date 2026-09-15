@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void) {
+int main() {
     char str[100];
     char *p;
     printf("Enter a string: ");
